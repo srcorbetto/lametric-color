@@ -14,17 +14,6 @@ const {
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-(async () => {
-  await openBrowser();
-  await goto("www.google.com");
-  await write("taiko test automation");
-  await press("Enter");
-  await currentURL().then((result) => {
-    console.log(result);
-  });
-  await closeBrowser();
-})().then(console.log("POOP"));
-
 // Specific figure screen...
 app.get("/purchase_history/:figureDoc", (req, res) => {
   res.render("figure", { figure: req.params.figureDoc, layout: "main" });
