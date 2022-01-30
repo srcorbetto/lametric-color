@@ -20,6 +20,10 @@ const getColor = (randColor) => {
   );
   axios.get(`https://www.thecolorapi.com/id?hex=${newColor}`).then((res) => {
     console.log(res.data);
+    console.log(
+      "====================================================================="
+    );
+    console.log(res.data.name.value);
   });
 };
 
