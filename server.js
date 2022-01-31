@@ -15,6 +15,7 @@ const {
   reload,
   $,
 } = require("taiko");
+const port = process.env.PORT || 80;
 
 // GET Request...
 app.get("/color", (req, res) => {
@@ -70,6 +71,6 @@ app.get("/color", (req, res) => {
   );
 });
 
-app.listen(8080, () => {
-  console.log("App running at port ", 8080);
+app.listen(port, () => {
+  console.log("App running at port ", port);
 });
