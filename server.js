@@ -19,7 +19,7 @@ app.get("/color", (req, res) => {
     .then((colorApiRes) => {
       colorName = colorApiRes.data.name.value;
       colorHex = colorApiRes.data.hex.value;
-      colorUrl = `https://singlecolorimage.com/get/${trimmedColor}/500x500`;
+      colorUrl = `https://singlecolorimage.com/get/${trimmedColor}/300x300`;
     })
     .then(() => {
       axios
@@ -35,11 +35,11 @@ app.get("/color", (req, res) => {
                 icon: `data:image/png;base64,${colorBinary}`,
                 index: 0,
               },
-              {
-                text: colorHex,
-                icon: `data:image/png;base64,${colorBinary}`,
-                index: 1,
-              },
+              //   {
+              //     text: colorHex,
+              //     icon: `data:image/png;base64,${colorBinary}`,
+              //     index: 1,
+              //   },
             ],
           };
           res.send(data);
