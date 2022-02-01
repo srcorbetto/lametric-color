@@ -30,16 +30,16 @@ app.get("/color", (req, res) => {
           colorBinary = Buffer.from(response.data, "binary").toString("base64");
           data = {
             frames: [
-              {
-                text: colorName,
-                icon: `data:image/png;base64,${colorBinary}`,
-                index: 0,
-              },
               //   {
-              //     text: colorHex,
+              //     text: colorName,
               //     icon: `data:image/png;base64,${colorBinary}`,
-              //     index: 1,
+              //     index: 0,
               //   },
+              {
+                text: trimmedColor,
+                icon: `data:image/png;base64,${colorBinary}`,
+                index: 1,
+              },
             ],
           };
           res.send(data);
