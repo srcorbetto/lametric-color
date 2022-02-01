@@ -19,7 +19,7 @@ app.get("/color", (req, res) => {
     .then((colorApiRes) => {
       colorName = colorApiRes.data.name.value;
       colorHex = colorApiRes.data.hex.value;
-      colorUrl = colorApiRes.data.image.bare;
+      colorUrl = `https://singlecolorimage.com/get/${trimmedColor}/500x500`;
     })
     .then(() => {
       axios
