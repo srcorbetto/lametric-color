@@ -24,7 +24,6 @@
     "dotenv": "^14.3.2",
     "express": "^4.17.2",
     "nodemon": "^2.0.15",
-    "randomcolor": "^0.6.2",
-    "taiko": "^1.2.8"
+    "randomcolor": "^0.6.2"
   }
 }
