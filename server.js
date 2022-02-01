@@ -32,12 +32,12 @@ app.get("/color", (req, res) => {
             frames: [
               {
                 text: colorName,
-                icon: colorBinary,
+                icon: `data:image/png;base64,${colorBinary}`,
                 index: 0,
               },
               {
                 text: colorHex,
-                icon: colorBinary,
+                icon: `data:image/png;base64,${colorBinary}`,
                 index: 1,
               },
             ],
